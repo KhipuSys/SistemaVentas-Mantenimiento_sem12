@@ -16,8 +16,16 @@ public class ClienteService {
 
     public void registrarCliente(String dni, String nombre, String tipo) {
 
+        dni = (dni == null) ? null : dni.trim();
+        nombre = (nombre == null) ? null : nombre.trim();
+
         if (!Validaciones.validarDni(dni)) {
             Console.error("DNI inválido");
+            return;
+        }
+
+        if (nombre == null || nombre.isEmpty()) {
+            Console.error("Nombre de cliente obligatorio");
             return;
         }
 
