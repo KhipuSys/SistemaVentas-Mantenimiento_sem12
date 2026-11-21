@@ -52,5 +52,6 @@ public class ReporteService {
     }
 
     public void imprimirTituloReporte() {
-    System.out.println("=== REPORTE GENERAL DE VENTAS ===");
+    System.out.println("=== REPORTE GENERAL DE VENTAS =====");
+
 }
