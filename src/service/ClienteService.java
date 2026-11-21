@@ -19,8 +19,8 @@ public class ClienteService {
         dni = (dni == null) ? null : dni.trim();
         nombre = (nombre == null) ? null : nombre.trim();
 
-        if (!Validaciones.validarDni(dni)) {
-            Console.error("DNI inválido");
+        if (dni == null || !dni.matches("\\d{8}") || !Validaciones.validarDni(dni)) {
+            Console.error("ERROR: Cliente inválido");
             return;
         }
 
